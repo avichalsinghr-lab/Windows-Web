@@ -657,39 +657,30 @@ nav.scrolled {
 }
 .success-msg.show { display: block; animation: slideUp 0.4s ease; }
 
-/* ================================================================
-   GALLERY GRID
-   To add gallery items: copy a .gallery-cell block in HTML
-   To change gallery icons/labels: edit inside .gallery-cell-inner
-   ================================================================ */
-.gallery-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto; gap: 12px; margin-top: 60px;
-}
-.gallery-cell {
-  aspect-ratio: 1; border-radius: 8px;
-  background: var(--blue-light); overflow: hidden; position: relative; cursor: pointer;
-  transition: transform 0.4s;
-}
-.gallery-cell:first-child { grid-column: span 2; grid-row: span 2; aspect-ratio: unset; }
-.gallery-cell:hover { transform: scale(0.98); }
-.gallery-cell-inner {
-  position: absolute; inset: 0;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, rgba(11,37,69,0.06), rgba(11,37,69,0.12));
-  transition: all 0.4s;
-}
-.gallery-cell:hover .gallery-cell-inner { background: linear-gradient(135deg, rgba(11,37,69,0.14), rgba(11,37,69,0.22)); }
-.gallery-cell-icon { font-size: 2.5rem; margin-bottom: 12px; transition: transform 0.4s; }
-.gallery-cell:hover .gallery-cell-icon { transform: scale(1.15); }
-.gallery-cell-label { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--blue); letter-spacing: 1px; }
-.gallery-overlay {
-  position: absolute; inset: 0; background: rgba(11,37,69,0.55);
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; transition: opacity 0.3s; border-radius: 8px;
-}
-.gallery-cell:hover .gallery-overlay { opacity: 1; }
-.gallery-overlay-text { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--white); letter-spacing: 3px; text-transform: uppercase; }
+<div class="gallery-grid">
+
+  <div class="gallery-cell">
+    <img src="images/photo1.jpg" alt="Gallery Image 1">
+    <div class="gallery-overlay">
+      <div class="gallery-overlay-text">View</div>
+    </div>
+  </div>
+
+  <div class="gallery-cell">
+    <img src="images/photo2.jpg" alt="Gallery Image 2">
+    <div class="gallery-overlay">
+      <div class="gallery-overlay-text">View</div>
+    </div>
+  </div>
+
+  <div class="gallery-cell">
+    <img src="images/photo3.jpg" alt="Gallery Image 3">
+    <div class="gallery-overlay">
+      <div class="gallery-overlay-text">View</div>
+    </div>
+  </div>
+
+</div>
 
 /* ================================================================
    PAGE HEADER (inner pages: Services, About, Gallery, Contact)
